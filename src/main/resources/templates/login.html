@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="ISO-8859-1">
+<title>User Login</title>
+<link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div align="center">
+    <h1>User Login</h1>
+    <div class=".container">
+  <form class="form-horizontal" action="#" th:action="@{/dologin}" method="post" th:object="${login}">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="code" placeholder="Enter code" name="code" th:field="*{code}">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd" th:field="*{password}">
+    </div>
+   
+    <div class="form-group">
+      <label for="deviceId">deviceId:</label>
+      <input type="text" class="form-control" id="deviceId" placeholder="Enter deviceId" name="deviceId" th:field="*{deviceId}">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+</div>
+</body>
+</html>
